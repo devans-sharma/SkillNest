@@ -8,7 +8,11 @@ import RegisterFormPage from "./pages/RegisterFormPage";
 
 import UserMarketplace from "./pages/UserMarketplace";
 import HomemakerMarketplace from "./pages/HomemakerMarketplace";
+const API_URL = import.meta.env.VITE_API_URL;
 
+fetch(`${API_URL}/api/endpoint`)
+  .then(res => res.json())
+  .then(data => console.log(data));
 function App() {
   return (
     <LanguageProvider>
